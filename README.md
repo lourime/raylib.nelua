@@ -3,7 +3,7 @@
 
 <img width="200" src="./assets/logo.png"></img>
 
-# Raylib.nelua - [Raylib](https://www.raylib.com/) binding for the [Nelua Programming Language](https://nelua.io/)
+# raylib.nelua - [raylib](https://www.raylib.com/) binding for the [Nelua Programming Language](https://nelua.io/)
 
 </p>
 
@@ -11,14 +11,14 @@
 
 </div>
 
-**Raylib.nelua** is a [Raylib](https://www.raylib.com/) binding for latest Raylib 5.5 version. A simple and easy-to-use library to learn videogames programming.
+**raylib.nelua** is a [Raylib](https://www.raylib.com/) binding for latest Raylib 6.1 version. A simple and easy-to-use library to learn videogames programming.
 
-Raylib.nelua. It's like Raylib on steroids, except without the harmful side effects. This delightful little binding brings the power and simplicity of Nelua to the world of Raylib game development.
+raylib.nelua. It's like raylib on steroids, except without the harmful side effects. This delightful little binding brings the power and simplicity of Nelua to the world of Raylib game development.
 
 ### Code Example
 
 <details>
-<summary><b>Raylib - Basic Window</b></summary>
+<summary><b>raylib - Basic Window</b></summary>
 
 ```lua
 require "raylib"
@@ -63,7 +63,7 @@ rl.closeWindow()       -- Close window and OpenGL context
 </details>
 
 <details>
-<summary><b>Raylib - Basic Keyboard Input</b></summary>
+<summary><b>raylib - Basic Keyboard Input</b></summary>
 
 ```lua
 require "raylib"
@@ -112,7 +112,7 @@ rl.closeWindow()       -- Close window and OpenGL context
 </details>
 
 <details>
-<summary><b>Raylib - Texture Loading and Drawing</b></summary>
+<summary><b>raylib - Texture Loading and Drawing</b></summary>
 
 ```lua
 require "raylib"
@@ -160,7 +160,7 @@ rl.closeWindow()       -- Close window and OpenGL context
 </details>
 
 <details>
-<summary><b>Raylib - Export to Web via Emscripten</b></summary>
+<summary><b>raylib - Export to Web via Emscripten</b></summary>
 
 ```lua
 require "raylib"
@@ -226,7 +226,7 @@ rl.closeWindow()       -- Close window and OpenGL context
 >
 > - Emscripten must be installed on your system.
 >
-> - You have to provide your own Raylib 4.5-dev (build from source) libraylib.a and include files for web export. [Please read here](https://github.com/raysan5/raylib/wiki/Working-for-Web-(HTML5)).
+> - You have to provide your own raylib (build from source) libraylib.a and include files for web export. [Please read here](https://github.com/raysan5/raylib/wiki/Working-for-Web-(HTML5)).
 >
 > - Your library and include files have to be placed in a folder "libs"/"include" respectively. You can, however change those settings in raylib.nelua.
 >
@@ -237,7 +237,7 @@ rl.closeWindow()       -- Close window and OpenGL context
 </details>
 
 <details>
-<summary><b>Raylib - 3D Free Camera</b></summary>
+<summary><b>raylib - 3D Free Camera</b></summary>
 
 ```lua
 require "raylib"
@@ -312,7 +312,7 @@ rl.closeWindow()       -- Close window and OpenGL context
 </details>
 
 <details>
-<summary><b>Raygui - Portable Window</b></summary>
+<summary><b>raygui - Portable Window</b></summary>
 
 ```lua
 require "raylib"
@@ -387,7 +387,7 @@ rl.closeWindow() -- Close window and OpenGL context
 </details>
 
 <details>
-<summary><b>Raygui - Scroll Panel</b></summary>
+<summary><b>raygui - Scroll Panel</b></summary>
 
 ```lua
 require "raylib"
