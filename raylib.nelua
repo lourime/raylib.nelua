@@ -1525,7 +1525,7 @@ function rl.isMusicValid(music: rl.music): boolean <cimport'IsMusicValid', cincl
 function rl.unloadMusicStream(music: rl.music): void <cimport'UnloadMusicStream', cinclude'<raylib.h>',nodecl> end
 function rl.playMusicStream(music: rl.music): void <cimport'PlayMusicStream', cinclude'<raylib.h>',nodecl> end
 function rl.isMusicPlaying(music: rl.music): boolean <cimport'IsMusicStreamPlaying', cinclude'<raylib.h>',nodecl> end
-function rl.IsMusicStreamPlaying(music: rl.music): boolean <cimport'IsMusicStreamPlaying', cinclude'<raylib.h>',nodecl> end
+function rl.isMusicStreamPlaying(music: rl.music): boolean <cimport'IsMusicStreamPlaying', cinclude'<raylib.h>',nodecl> end
 function rl.updateMusicStream(music: rl.music): void <cimport'UpdateMusicStream', cinclude'<raylib.h>',nodecl> end
 function rl.stopMusicStream(music: rl.music): void <cimport'StopMusicStream', cinclude'<raylib.h>',nodecl> end
 function rl.pauseMusicStream(music: rl.music): void <cimport'PauseMusicStream', cinclude'<raylib.h>',nodecl> end
