@@ -460,10 +460,10 @@ function rlgl.getShaderLocsDefault(): *cint <cimport'rlGetShaderLocsDefault', ci
 -- Render batch management
 -- NOTE: rlgl provides a default render batch to behave like OpenGL 1.1 immediate mode
 -- but this render batch API is exposed in case of custom batches are required
---function rlgl.LoadRenderBatch(numBuffers: cint, bufferElements: cint): rlgl.renderBatch <cimport'rlLoadRenderBatch', cinclude'<rlgl.h>',nodecl> end
---function rlgl.unloadRenderBatch(batch: rlgl.renderBatch): void <cimport'rlUnloadRenderBatch', cinclude'<rlgl.h>',nodecl> end
---function rlgl.drawRenderBatch(batch: *rlgl.renderBatch): void <cimport'rlDrawRenderBatch', cinclude'<rlgl.h>',nodecl> end
---function rlgl.setRenderBatchActive(batch: *rlgl.renderBatch): void <cimport'rlSetRenderBatchActive', cinclude'<rlgl.h>',nodecl> end
+function rlgl.loadRenderBatch(numBuffers: cint, bufferElements: cint): rlgl.renderBatch <cimport'rlLoadRenderBatch', cinclude'<rlgl.h>',nodecl> end
+function rlgl.unloadRenderBatch(batch: rlgl.renderBatch): void <cimport'rlUnloadRenderBatch', cinclude'<rlgl.h>',nodecl> end
+function rlgl.drawRenderBatch(batch: *rlgl.renderBatch): void <cimport'rlDrawRenderBatch', cinclude'<rlgl.h>',nodecl> end
+function rlgl.setRenderBatchActive(batch: *rlgl.renderBatch): void <cimport'rlSetRenderBatchActive', cinclude'<rlgl.h>',nodecl> end
 function rlgl.drawRenderBatchActive(): void <cimport'rlDrawRenderBatchActive', cinclude'<rlgl.h>',nodecl> end
 function rlgl.checkRenderBatchLimit(vCount: cint): boolean <cimport'rlCheckRenderBatchLimit', cinclude'<rlgl.h>',nodecl> end
 function rlgl.setTexture(id: cuint): void <cimport'rlSetTexture', cinclude'<rlgl.h>',nodecl> end
