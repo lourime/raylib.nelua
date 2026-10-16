@@ -63,7 +63,7 @@ function rlgui.getTextWidth(text: cstring): cint <cimport'GuiGetTextWidth', cinc
 global rlgui.styleProp: type <cimport'GuiStyleProp', cinclude'<raygui.h>',nodecl> = @record{
   controlId: cushort,
   propertyId: cushort,
-  propertyValue: cuint
+  propertyValue: cint
 }
 
 --------------------------------------------------------------------------------------------------------------------------
