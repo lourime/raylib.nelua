@@ -1700,7 +1700,10 @@ function rl.vector2.moveTowards(v: rl.vector2, target: rl.vector2, maxDistance: 
 function rl.vector2.invert(v: rl.vector2): rl.vector2 <cimport'Vector2Invert', cinclude'<raymath.h>',nodecl> end
 function rl.vector2.clamp(v: rl.vector2, min: rl.vector2, max: rl.vector2): rl.vector2 <cimport'Vector2Clamp', cinclude'<raymath.h>',nodecl> end
 function rl.vector2.clampValue(v: rl.vector2, min: float32, max: float32): rl.vector2 <cimport'Vector2ClampValue', cinclude'<raymath.h>',nodecl> end
+function rl.vector2.min(v1: rl.vector2, v2: rl.vector2): rl.vector2 <cimport'Vector2Min', cinclude'<raymath.h>',nodecl> end
+function rl.vector2.max(v1: rl.vector2, v2: rl.vector2): rl.vector2 <cimport'Vector2Max', cinclude'<raymath.h>',nodecl> end
 function rl.vector2.equals(p: rl.vector2, q: rl.vector2): boolean <cimport'Vector2Equals', cinclude'<raymath.h>',nodecl> end
+function rl.vector2.refract(v: rl.vector2, n: rl.vector2, r: float32): rl.vector2 <cimport'Vector2Refract', cinclude'<raymath.h>',nodecl> end
 function rl.vector2.__len(v: rl.vector2): float32 <cimport'Vector2Length', cinclude'<raymath.h>',nodecl> end
 function rl.vector2.__eq(v1: rl.vector2, v2: rl.vector2): boolean <cimport'Vector2Equals', cinclude'<raymath.h>',nodecl> end
 
@@ -1816,6 +1819,7 @@ function rl.vector3.transform(v: rl.vector3, mat: rl.matrix): rl.vector3 <cimpor
 function rl.vector3.rotateByQuaternion(v: rl.vector3, q: rl.quaternion): rl.vector3 <cimport'Vector3RotateByQuaternion', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.rotateByAxisAngle(v: rl.vector3, axis: rl.vector3, angle: float32): rl.vector3 <cimport'Vector3RotateByAxisAngle', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.lerp(v1: rl.vector3, v2: rl.vector3, amount: float32): rl.vector3 <cimport'Vector3Lerp', cinclude'<raymath.h>',nodecl> end
+function rl.vector3.cubicHermite(v1: rl.vector3, tangent1: rl.vector3, v2: rl.vector3, tangent2: rl.vector3, amount: float32): rl.vector3 <cimport'Vector3CubicHermite', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.reflect(v: rl.vector3, normal: rl.vector3): rl.vector3 <cimport'Vector3Reflect', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.min(v1: rl.vector3, v2: rl.vector3): rl.vector3 <cimport'Vector3Min', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.max(v1: rl.vector3, v2: rl.vector3): rl.vector3 <cimport'Vector3Max', cinclude'<raymath.h>',nodecl> end
@@ -1826,6 +1830,7 @@ function rl.vector3.clamp(v: rl.vector3, min: rl.vector3, max: rl.vector3): rl.v
 function rl.vector3.clampValue(v: rl.vector3, min: float32, max: float32): rl.vector3 <cimport'Vector3ClampValue', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.equals(p: rl.vector3, q: rl.vector3): boolean <cimport'Vector3Equals', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.refract(v: rl.vector3, n: rl.vector3, r: float32): rl.vector3 <cimport'Vector3Refract', cinclude'<raymath.h>',nodecl> end
+function rl.vector3.moveTowards(v: rl.vector3, target: rl.vector3, maxDistance: float32): rl.vector3 <cimport'Vector3MoveTowards', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.__len(v: rl.vector3): float32 <cimport'Vector3Length', cinclude'<raymath.h>',nodecl> end
 function rl.vector3.__eq(v1: rl.vector3, v2: rl.vector3): boolean <cimport'Vector3Equals', cinclude'<raymath.h>',nodecl> end
 
@@ -1915,6 +1920,24 @@ function rl.vector3.toFloatV(v: rl.vector3): rl.float3
     return buffer
 end
 
+function rl.vector4.zero(): rl.vector4 <inline>
+    return (@rl.vector4){0, 0, 0, 0}
+end
+
+function rl.vector4.one(): rl.vector4 <inline>
+    return (@rl.vector4){1, 1, 1, 1}
+end
+
+function rl.vector4.lengthSqr(v: rl.vector4): float32 <cimport'Vector4LengthSqr', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.dotProduct(v1: rl.vector4, v2: rl.vector4): float32 <cimport'Vector4DotProduct', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.distance(v1: rl.vector4, v2: rl.vector4): float32 <cimport'Vector4Distance', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.distanceSqr(v1: rl.vector4, v2: rl.vector4): float32 <cimport'Vector4DistanceSqr', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.negate(v: rl.vector4): rl.vector4 <cimport'Vector4Negate', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.normalize(v: rl.vector4): rl.vector4 <cimport'Vector4Normalize', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.min(v1: rl.vector4, v2: rl.vector4): rl.vector4 <cimport'Vector4Min', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.max(v1: rl.vector4, v2: rl.vector4): rl.vector4 <cimport'Vector4Max', cinclude'<raymath.h>',nodecl> end
+function rl.vector4.moveTowards(v: rl.vector4, target: rl.vector4, maxDistance: float32): rl.vector4 <cimport'Vector4MoveTowards', cinclude'<raymath.h>',nodecl> end
+
 -- ----------------------------------------------------------------------------------
 -- Module Functions Definition - Matrix math
 -- ----------------------------------------------------------------------------------
@@ -1964,6 +1987,7 @@ function rl.quaternion.divide(q1: rl.quaternion, q2: rl.quaternion): rl.quaterni
 function rl.quaternion.lerp(q1: rl.quaternion, q2: rl.quaternion, amount: float32): rl.quaternion <cimport'QuaternionLerp', cinclude'<raymath.h>',nodecl> end
 function rl.quaternion.nLerp(q1: rl.quaternion, q2: rl.quaternion, amount: float32): rl.quaternion <cimport'QuaternionNlerp', cinclude'<raymath.h>',nodecl> end
 function rl.quaternion.sLerp(q1: rl.quaternion, q2: rl.quaternion, amount: float32): rl.quaternion <cimport'QuaternionSlerp', cinclude'<raymath.h>',nodecl> end
+function rl.quaternion.cubicHermiteSpline(q1: rl.quaternion, outTangent1: rl.quaternion, q2: rl.quaternion, inTangent2: rl.quaternion, t: float32): rl.quaternion <cimport'QuaternionCubicHermiteSpline', cinclude'<raymath.h>',nodecl> end
 function rl.quaternion.fromVector3ToVector3(from: rl.vector3, to: rl.vector3): rl.quaternion <cimport'QuaternionFromVector3ToVector3', cinclude'<raymath.h>',nodecl> end
 function rl.quaternion.fromMatrix(mat: rl.matrix): rl.quaternion <cimport'QuaternionFromMatrix', cinclude'<raymath.h>',nodecl> end
 function rl.quaternion.toMatrix(q: rl.quaternion): rl.matrix <cimport'QuaternionToMatrix', cinclude'<raymath.h>',nodecl> end
