@@ -1594,7 +1594,7 @@ end
 function rl.scissorMode(x: int32, y: int32, width: int32, height: int32, block: function()) <inline>
     rl.beginScissorMode(x, y, width, height)
     block()
-    rl.endShaderMode()
+    rl.endScissorMode()
 end
 
 function rl.vrMode(config: rl.vrStereoConfig, block: function()) <inline>
